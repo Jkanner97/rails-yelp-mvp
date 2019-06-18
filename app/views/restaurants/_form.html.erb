@@ -1,0 +1,19 @@
+<%= simple_form_for(@restaurant) do |f| %>
+
+  <% if @restaurant.errors.any? %>
+    <% @restaurant.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+      <% end %>
+  <% end %>
+
+  <div>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category %>
+    <%= f.input :phone_number %>
+  </div>
+
+  <div class=" btn btn-warning">
+    <%= f.button :submit %>
+  </div>
+  <% end %>
